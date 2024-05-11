@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SyncVault</string>
+    <string name="selected_folder">Выбрана папка: %1$s</string>
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+    <string name="file_icon_description"/>
+</resources>

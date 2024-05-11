@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                                           android:id="@+id/drawerLayout"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent">
+
+    <!-- Основное содержимое -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:padding="16dp"
+                  android:background="@color/background">
+
+        <TextView
+                android:id="@+id/titleSyncVault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SyncVault"
+                android:textSize="24sp"
+                android:textColor="@color/on_background"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+        <TextView
+                android:id="@+id/labelFoldersOnDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выбранные папки на телефоне"
+                android:textColor="@color/on_background"
+                android:padding="8dp"/>
+
+        <TextView
+                android:id="@+id/pathFoldersOnDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Путь не выбран"
+                android:textColor="@color/on_background"
+                android:padding="8dp"
+                android:background="@drawable/path_background" />
+
+        <TextView
+                android:id="@+id/labelFoldersOnServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выбранные папки на сервере"
+                android:textColor="@color/on_background"
+                android:padding="8dp"/>
+
+        <TextView
+                android:id="@+id/pathFoldersOnServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Путь не выбран"
+                android:textColor="@color/on_background"
+                android:padding="8dp"
+                android:background="@drawable/path_background" />
+
+        <Button
+                android:id="@+id/buttonSync"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Синхронизировать"
+                android:backgroundTint="@color/secondary"
+                android:textColor="@color/on_primary"
+                android:layout_marginTop="16dp"/>
+
+        <TextView
+                android:id="@+id/textViewLogs"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/on_surface"
+                android:background="@color/surface"
+                android:padding="8dp"
+                android:scrollbars="vertical"/>
+    </LinearLayout>
+
+    <!-- Боковое меню -->
+    <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <Button
+                    android:id="@+id/buttonServerLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Войти на сервер"/>
+
+            <Button
+                    android:id="@+id/buttonSelectFolders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выбор папок"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Версия/Билд/Дата"
+                    android:layout_gravity="bottom"
+                    android:padding="16dp"/>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
